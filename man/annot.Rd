@@ -4,24 +4,30 @@
 Data extraction function.
 }
 \description{
-Extract data annotations about lists of identifiers or microarray probes ID from an annotations file.
-Batch processing of identifiers lists is allowed.
+Annotate multiple lists from a specific annotation file.
 }
 \usage{
-annot(n, path)
+annot(annot_file="", data_dir="", res_path="", display=TRUE)
 }
 \arguments{
-  \item{n}{
-TRUE/FALSE to use the batch processing mode.
+  \item{annot_file}{
+Path for the annotations file.
 }
-  \item{path}{
-Folder path where are placed the resulting files. Default path is the working directory.
+  \item{data_dir}{
+Path of the folder where are placed the lists.
+}
+  \item{res_path}{
+Path of the resulting annotated lists.
+}
+  \item{display}{
+If informations could be displayed during the process.
 }
 }
 \value{
-Annotated data files are placed @ path or in your working directoty.
-If the batch mode is used, the annotated lists would be named: list names + "_annot.txt".
-If only one list is annotated the resulting list is named "list_annot.txt".
+The resulting annotated lists are placed in a folder named "AnnotLists_" in the working directory.
+Thelists will be named: "Annot_" + lists names.
+If a list could not be fully annotated a file - "Rest_" + lists names - with the renmaining unannotated identifers will be created.
+The percentage of annotated identifier for each list is displayed during the process.
 }
 \references{
 http://www.mrbioinfo.com

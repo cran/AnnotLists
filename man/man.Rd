@@ -1,13 +1,13 @@
-\name{man}
-\alias{man}
+\name{man.annot}
+\alias{man.annot}
 \title{
-User manual.
+Quick user manual.
 }
 \description{
 A quick user manual for the AnnotLists package. 
 }
 \usage{
-man()
+man.annot()
 }
 \author{
 Nicolas Cagnard
