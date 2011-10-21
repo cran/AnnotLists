@@ -17,8 +17,8 @@ Mor informations at http://www.mrbioinfo.com.
 \tabular{ll}{
 Package: \tab AnnotLists\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2011-18-10\cr
+Version: \tab 1.2\cr
+Date: \tab 2011-10-21\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 }

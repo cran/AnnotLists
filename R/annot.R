@@ -6,7 +6,7 @@ function(annot_file="", data_dir="", res_path="", display=TRUE)
   {
     liste = read.table(file=list_id, header=TRUE, sep="\t")
     res = annot[duplicated(c(liste[,1], annot[,1]))[(nrow(liste)+1):(nrow(annot)+nrow(liste))],]
-    rest = cbind(liste[order(liste[,1]),], res[order(res[,1]),])
+    if(ncol(liste)>2) res = cbind(res[order(res[,1]),], liste[order(liste[,1]),])
 
     if(nrow(res)!=nrow(liste))
     {
@@ -25,7 +25,7 @@ function(annot_file="", data_dir="", res_path="", display=TRUE)
   {
     write("\t########################################################", file="")
     write("\t#                                                      #", file="")
-    write("\t#                     Annot (v1.1)                     #", file="")
+    write("\t#                     Annot (v1.2)                     #", file="")
     write("\t#                                                      #", file="")
     write("\t########################################################", file="")
     write("\t[Run man.annot() for quick help]", file="")
